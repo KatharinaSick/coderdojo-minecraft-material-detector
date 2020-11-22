@@ -25,7 +25,7 @@ Bei diesem Workshop haben wir uns darauf konzentriert, dass alle auf ihrem lokal
 2. Lade die Datei `spigot-1.16.4.jar` herunter und speichere sie in deinem neuen Ordner.
 3. Mach einen Doppelklick auf die Datei `spigot-1.16.4.jar` um sie auszuführen. Das kann ein paar Sekunden dauern
 . Danach sollte es in deinem Ordner so aussehen: 
-![spigot-1.16.4.jar nach dem ersten Ausführen](TODO)
+![spigot-1.16.4.jar nach dem ersten Ausführen](readme/images/spigot-eula.png)
 4. Öffne nun die Datei `eula.txt` und ändere die Zeile `eula=false` auf `eula=true` um dem Endebenutzer-Lizenzvertrag
  zuzustimmen.
 5. Mach einen Doppelklick auf die Datei `spigot-1.16.4.jar` um sie auszuführen. Das kann wieder ein bisschen dauern
@@ -39,7 +39,7 @@ Bei diesem Workshop haben wir uns darauf konzentriert, dass alle auf ihrem lokal
 9. Wähle links in der Liste "Gradle" mit einem Klick aus. 
 10. Setze die Project SDK auf 11 und wähle bei "Additional Libraries and Frameworks" "Java" mit einem Klick aus. Das
  sollte dann in etwa so wie unten im Bild aussehen.
-![IntelliJ IDEA Projekt erstellen](TODO)
+![IntelliJ IDEA Projekt erstellen](readme/images/intellij-new-project.png)
 11. Klicke auf "Next".
 12. Gib den Namen deines Projektes bei "Name:" ein. Ich habe hier "MaterialDetector" eingegeben. Klicke dann auf "Finish".
 13. Öffne die Datei `build.gradle` und füge das Repository hinzu, von dem später die Bukkit Dependency
@@ -77,9 +77,7 @@ dependencies {
 16. Mache einen Rechtsklick auf den Ordner `src/main/java` und klicke auf "New" -> "Java Class" um eine neue Java
  Klasse zu erstellen.
 17. Gib den Namen "MaterialDetector" ein und drücke auf Enter.
-18. Füge den folgenden Code in die neue Klasse ein. Was es damit auf sich hat, kannst du [in dieser Übungsanleitung
-](https://linz.coderdojo.net/uebungsanleitungen/programmieren/minecraft/plugins/erstes-plugin/#die-klasse
--programmieren) nachlesen.
+18. Füge den folgenden Code in die neue Klasse ein. Was es damit auf sich hat, kannst du [in dieser Übungsanleitung](https://linz.coderdojo.net/uebungsanleitungen/programmieren/minecraft/plugins/erstes-plugin/#die-klasse-programmieren) nachlesen.
 ```java
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -105,9 +103,7 @@ public class MaterialDetector extends JavaPlugin {
 ```
 19. Mache nun einen Rechtsklick auf den Ordner `src/main/resources` und klicke auf "New" -> "File". Gib den Namen
  "plugin.yml" ein und drücke auf Enter.
-20. Füge den folgenden Code in die neue Datei ein. Details dazu kannst du wieder [in dieser Übungsanleitung](https
-://linz.coderdojo.net/uebungsanleitungen/programmieren/minecraft/plugins/erstes-plugin/#das-plugin-yml-anlegen-das
--projekt-bauen-und-testen) nachlesen.
+20. Füge den folgenden Code in die neue Datei ein. Details dazu kannst du wieder [in dieser Übungsanleitung](https://linz.coderdojo.net/uebungsanleitungen/programmieren/minecraft/plugins/erstes-plugin/#das-plugin-yml-anlegen-das-projekt-bauen-und-testen) nachlesen.
 ```yml
 name: MaterialDetector
 main: MaterialDetector
@@ -121,7 +117,7 @@ commands:
 21. Klicke in der rechten Sidebar von IntelliJ IDEA auf "Gradle".
 22. Öffne dein Projekt mit einem Doppelklick auf deinen Projektnamen (in meinem Fall "MaterialDetector"). 
 23. Klicke nun auf "Tasks" und dann auf "build". Die Sidebar sollte nun so aussehen:
-![IntelliJ IDEA Gradle Sidebar](TODO)
+![IntelliJ IDEA Gradle Sidebar](readme/images/intellij-gradle.png)
 24. Klicke nun auf "jar" (im Bild oben blau markiert), um eine JAR Datei zu erstellen, die deinen Code beinhaltet.
 25. Öffne nun den (neuen) Ordner "build" in der linken Sidebar und öffne darin den Ordner "libs".
 26. Kopiere die darin enthaltene .jar Datei.
