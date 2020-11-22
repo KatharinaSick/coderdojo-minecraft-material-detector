@@ -139,6 +139,7 @@ gradle-app.setting
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
+!spigot-1.16.4.jar
 
 # Cache of project
 .gradletasknamecache
