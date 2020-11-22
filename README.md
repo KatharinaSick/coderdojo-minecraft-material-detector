@@ -5,8 +5,8 @@ auf Kommando zu begrüßen und werden in weiterer Folge einen "Material-Detektor
 Metalldetektor funktionieren und einen Ton abspielen, wenn ein bestimmter Block (z.B. ein Diamant) in der Nähe ist
 . [In diesem Video](https://youtu.be/EDVATLCACEM) siehst du, wie das dann in etwa aussehen soll.
 
-[![Material Detector Demo Video](https://img.youtube.com/vi/EDVATLCACEM/maxresdefault.jpg)](https://youtu.be
-/EDVATLCACEM)
+[![Material Detector Demo](https://img.youtube.com/vi/EDVATLCACEM/0.jpg)](https://www.youtube.com/watch?v=EDVATLCACEM)
+
 
 ## Zusammenfassung 1. Termin | 11.20.2020
 
