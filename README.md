@@ -19,7 +19,7 @@ Bei diesem Workshop haben wir uns darauf konzentriert, dass alle auf ihrem lokal
 - [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download/) mit Version 2020.2.3
 - Java 11
 
-## Anleitunng
+## Anleitung
 
 1. Erstelle einen neuen Ordner. Ich habe meinen zum Beispiel `minecraft-server` genannt.
 2. Lade die Datei `spigot-1.16.4.jar` herunter und speichere sie in deinem neuen Ordner.
