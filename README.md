@@ -8,7 +8,7 @@ Metalldetektor funktionieren und einen Ton abspielen, wenn ein bestimmter Block 
 [![Material Detector Demo](https://img.youtube.com/vi/EDVATLCACEM/0.jpg)](https://www.youtube.com/watch?v=EDVATLCACEM)
 
 
-## Zusammenfassung 1. Termin | 11.20.2020
+## Zusammenfassung 1. Termin | 20.11.2020
 
 Bei diesem Workshop haben wir uns darauf konzentriert, dass alle auf ihrem lokalen Minecraft Server spielen können
  und haben danach ein kleines Plugin geschrieben, welches den Spieler auf Kommando begrüßt. Unten findest du eine
