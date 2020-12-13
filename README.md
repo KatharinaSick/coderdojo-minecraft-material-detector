@@ -1,18 +1,17 @@
 # Coderdojo Workshops: Minecraft Material Detector
 
-In diesen Workshops programmieren wir ein Java Plugin für Minecraft. Dabei starten wir ganz einfach damit, den Spieler 
-auf Kommando zu begrüßen und werden in weiterer Folge einen "Material-Detektor" bauen. Dieser soll ähnlich wie ein 
-Metalldetektor funktionieren und einen Ton abspielen, wenn ein bestimmter Block (z.B. ein Diamant) in der Nähe ist
-. [In diesem Video](https://youtu.be/EDVATLCACEM) siehst du, wie das dann in etwa aussehen soll.
+In diesen Workshops programmieren wir ein Java Plugin für Minecraft. Dabei starten wir ganz einfach damit, den Spieler auf Kommando zu begrüßen und werden in weiterer Folge einen "Material-Detektor" bauen. Dieser soll ähnlich wie ein Metalldetektor funktionieren und einen Ton abspielen, wenn ein bestimmter Block (z.B. ein Diamant) in der Nähe ist. [In diesem Video](https://youtu.be/EDVATLCACEM) siehst du, wie das dann in etwa aussehen soll.
 
 [![Material Detector Demo](https://img.youtube.com/vi/EDVATLCACEM/0.jpg)](https://www.youtube.com/watch?v=EDVATLCACEM)
 
+## Inhaltsverzeichnis
+
+- [Zusammenfassung 1. Termin | 20.11.2020](#zusammenfassung-1-termin--20112020)
+- [Zusammenfassung 2. Termin Anfänger | 10.12.2020](#zusammenfassung-2-termin-anfnger--10122020)
 
 ## Zusammenfassung 1. Termin | 20.11.2020
 
-Bei diesem Workshop haben wir uns darauf konzentriert, dass alle auf ihrem lokalen Minecraft Server spielen können
- und haben danach ein kleines Plugin geschrieben, welches den Spieler auf Kommando begrüßt. Unten findest du eine
-  kurze Übersicht der Dinge, die wir im Workshop besprochen haben.
+Bei diesem Workshop haben wir uns darauf konzentriert, dass alle auf ihrem lokalen Minecraft Server spielen können und haben danach ein kleines Plugin geschrieben, welches den Spieler auf Kommando begrüßt. Unten findest du eine kurze Übersicht der Dinge, die wir im Workshop besprochen haben. Den Code für diesen Workshop findest du auf dem Branch [2020-11-20_first-workshop](https://github.com/KatharinaSick/coderdojo-minecraft-material-detector/tree/2020-11-20_first-workshop).
  
 ## Voraussetzungen
 - Eine offizielle Installation von Minecraft (Java Version) mit Version 1.16.4
@@ -133,3 +132,14 @@ commands:
 30. Starte deinen Server erneut mit einem Doppelklick auf `spigot-1.16.4.jar`. 
 31. Wenn du nun Minecraft öffnest und dich zu deinem Server verbindest, kannst du nun das Kommando "/sayhello
 " eingeben. Der Server wird dich dann begrüßen :)
+
+## Zusammenfassung 2. Termin Anfänger | 10.12.2020
+
+Bei diesem Workshop haben wir uns darauf konzentriert, dass alle auf ihrem lokalen Minecraft Server spielen können und haben danach ein kleines Plugin geschrieben, welches den Spieler auf Kommando begrüßt. Unten findest du eine kurze Übersicht der Dinge, die wir im Workshop besprochen haben. Den Code für diesen Workshop findest du auf dem Branch [2020-11-20_first-workshop](https://github.com/KatharinaSick/coderdojo-minecraft-material-detector/tree/20201-12-11_second-workshop-beginners).
+ 
+## Voraussetzungen
+- Eine offizielle Installation von Minecraft (Java Version) mit Version 1.16.4
+- [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download/) mit Version 2020.2.3
+- Java 11
+
+## Anleitung
