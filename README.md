@@ -1,13 +1,3 @@
-# Coderdojo Workshops: Minecraft Material Detector
-
-In diesen Workshops programmieren wir ein Java Plugin für Minecraft. Dabei starten wir ganz einfach damit, den Spieler 
-auf Kommando zu begrüßen und werden in weiterer Folge einen "Material-Detektor" bauen. Dieser soll ähnlich wie ein 
-Metalldetektor funktionieren und einen Ton abspielen, wenn ein bestimmter Block (z.B. ein Diamant) in der Nähe ist
-. [In diesem Video](https://youtu.be/EDVATLCACEM) siehst du, wie das dann in etwa aussehen soll.
-
-[![Material Detector Demo](https://img.youtube.com/vi/EDVATLCACEM/0.jpg)](https://www.youtube.com/watch?v=EDVATLCACEM)
-
-
 ## Zusammenfassung 1. Termin | 20.11.2020
 
 Bei diesem Workshop haben wir uns darauf konzentriert, dass alle auf ihrem lokalen Minecraft Server spielen können
