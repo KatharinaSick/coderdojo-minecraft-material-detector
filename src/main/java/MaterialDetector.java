@@ -1,6 +1,7 @@
+import detectors.Detector;
+import listener.PlayerEventListener;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MaterialDetector extends JavaPlugin {
@@ -8,13 +9,17 @@ public class MaterialDetector extends JavaPlugin {
     @Override
     public void onEnable() {
         super.onEnable();
+
+        Detector detector = new Detector();
+        detector.addCraftingRecipe(this);
+
+        getServer().getPluginManager().registerEvents(new PlayerEventListener(detector), this);
     }
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (label.equals("sayhello")) {
-            Player player = getServer().getPlayer(sender.getName());
-            player.sendMessage("Hallo " + sender.getName());
+        if (command.getName().equals("sayhello")) {
+            sender.sendMessage("Hallo " + sender.getName());
         }
         return super.onCommand(sender, command, label, args);
     }
