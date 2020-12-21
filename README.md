@@ -17,3 +17,6 @@ Bei diesem Workshop haben wir einen sogenannten EventListener hinzugefügt, um d
 
 ## [2. Termin Fortgeschrittene | 15.12.2020](https://github.com/KatharinaSick/coderdojo-minecraft-material-detector/tree/2020-12-15_second-workshop-advanced)
 Bei diesem Workshop haben wir einen sogenannten EventListener hinzugefügt, um den Spieler nicht nur auf Kommando zu begrüßen, sondern sofort wenn er auf den Server kommt. Als nächstes haben wir ein eigenes Rezept für eine Diamant Spitzhhacke, die später Kohle detektieren soll, hinzugefügt und unseren EventListener dann so erweitert, dass ein Ton abgespielt wird, sobald der Spieler auf einen Block zeigt, unter dem sich Kohle befindet. Den Code für diesen Workshop findest du auf dem Branch [2020-12-15_second-workshop-advanced](https://github.com/KatharinaSick/coderdojo-minecraft-material-detector/tree/2020-12-15_second-workshop-advanced).
+
+## [3. Termin | 18.12.2020](https://github.com/KatharinaSick/coderdojo-minecraft-material-detector/tree/2020-12-18_third-workshop)
+Bei diesem Workshop haben wir unseren Kohledetektor so angepasst, dass nicht nur Blöcke unter dem aktuellen Block sondern auch die umliegenden Blöcke überprüft werden. Den Code für diesen Workshop findest du auf dem Branch [2020-12-18_third-workshop](https://github.com/KatharinaSick/coderdojo-minecraft-material-detector/tree/2020-12-18_third-workshop).
