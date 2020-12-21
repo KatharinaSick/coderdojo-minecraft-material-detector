@@ -1,5 +1,5 @@
 import detectors.Detector;
-import listener.PlayerEventListener;
+import listeners.PlayerEventListener;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
