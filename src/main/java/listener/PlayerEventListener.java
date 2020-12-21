@@ -45,7 +45,9 @@ public class PlayerEventListener implements Listener {
         Block targetBlock = player.getTargetBlock(null, 5);
         Location targetLocation = targetBlock.getLocation();
         if (detector.isMaterialBelowLocation(player.getWorld(), targetLocation)) {
-            player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 1, 1);
+            player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 1, 2);
+        } else if (detector.isMaterialInRange(player.getWorld(), targetLocation)) {
+            player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, 0.5F, 1);
         }
     }
 }

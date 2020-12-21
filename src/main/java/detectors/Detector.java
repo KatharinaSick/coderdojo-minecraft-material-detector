@@ -72,4 +72,15 @@ public class Detector {
         }
         return false;
     }
+
+    public boolean isMaterialInRange(World world, Location location) {
+        for(int x = location.getBlockX() - 1; x <= location.getBlockX() + 1; x++) {
+            for(int z = location.getBlockZ() - 1; z <= location.getBlockZ() + 1; z++) {
+                if (isMaterialBelowLocation(world, new Location(world, x, location.getBlockY(), location.getBlockZ()))) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
