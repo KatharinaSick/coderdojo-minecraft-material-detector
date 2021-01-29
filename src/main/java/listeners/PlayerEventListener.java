@@ -12,12 +12,14 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.Map;
+
 public class PlayerEventListener implements Listener {
 
-    private Detector detector;
+    private final Map<Integer, Detector> detectors;
 
-    public PlayerEventListener(Detector detector) {
-        this.detector = detector;
+    public PlayerEventListener(Map<Integer, Detector> detectors) {
+        this.detectors = detectors;
     }
 
     @EventHandler
@@ -25,7 +27,9 @@ public class PlayerEventListener implements Listener {
         Player player = event.getPlayer();
         player.sendMessage("Hallo " + player.getName());
 
-        player.discoverRecipe(detector.getKey());
+        detectors.forEach((id, detector) -> {
+            player.discoverRecipe(detector.getKey());
+        });
     }
 
     @EventHandler
@@ -38,7 +42,12 @@ public class PlayerEventListener implements Listener {
         }
 
         ItemMeta meta = itemInMainHand.getItemMeta();
-        if (meta == null || !meta.hasCustomModelData() || meta.getCustomModelData() != detector.getId()) {
+        if (meta == null || !meta.hasCustomModelData()) {
+            return;
+        }
+
+        Detector detector = detectors.get(meta.getCustomModelData());
+        if (detector == null) {
             return;
         }
 

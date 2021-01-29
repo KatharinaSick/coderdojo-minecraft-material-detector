@@ -10,20 +10,21 @@ import org.bukkit.plugin.Plugin;
 
 public class Detector {
 
-    private String name;
-    private int id;
+    private final String name;
+    private final int id;
 
-    private Material materialToDetect;
-    private Material craftingMaterial;
+    private final Material materialToDetect;
+    private final Material craftingMaterial;
 
     private NamespacedKey recipeKey;
 
-    public Detector() {
-        name = "Diamant Kohle Detektor Spitzhacke";
+    public Detector(String namePrefix, String nameOfMaterialToDetect, String nameOfBaseMaterial,
+                    Material materialToDetect, Material craftingMaterial) {
+        name = namePrefix + " " + nameOfMaterialToDetect + " Detektor " + nameOfBaseMaterial;
         id = name.hashCode();
 
-        materialToDetect = Material.COAL_ORE;
-        craftingMaterial = Material.COAL;
+        this.materialToDetect = materialToDetect;
+        this.craftingMaterial = craftingMaterial;
     }
 
     public NamespacedKey getKey() {
@@ -76,7 +77,7 @@ public class Detector {
     public boolean isMaterialInRange(World world, Location location) {
         for(int x = location.getBlockX() - 1; x <= location.getBlockX() + 1; x++) {
             for(int z = location.getBlockZ() - 1; z <= location.getBlockZ() + 1; z++) {
-                if (isMaterialBelowLocation(world, new Location(world, x, location.getBlockY(), location.getBlockZ()))) {
+                if (isMaterialBelowLocation(world, new Location(world, x, location.getBlockY(), z))) {
                     return true;
                 }
             }

@@ -1,8 +1,13 @@
 import detectors.Detector;
 import listeners.PlayerEventListener;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class MaterialDetector extends JavaPlugin {
 
@@ -10,10 +15,17 @@ public class MaterialDetector extends JavaPlugin {
     public void onEnable() {
         super.onEnable();
 
-        Detector detector = new Detector();
-        detector.addCraftingRecipe(this);
+        Map<Integer, Detector> detectors = new HashMap<>();
 
-        getServer().getPluginManager().registerEvents(new PlayerEventListener(detector), this);
+        Detector diamondCoalDetector = new Detector("Diamant", "Kohle", "Spitzhacke", Material.COAL_ORE, Material.COAL);
+        diamondCoalDetector.addCraftingRecipe(this);
+        detectors.put(diamondCoalDetector.getId(), diamondCoalDetector);
+
+        Detector woodenCoalDetector = new Detector("Holz", "Kohle", "Spitzhacke", Material.COAL_ORE, Material.COAL);
+        woodenCoalDetector.addCraftingRecipe(this);
+        detectors.put(woodenCoalDetector.getId(), woodenCoalDetector);
+
+        getServer().getPluginManager().registerEvents(new PlayerEventListener(detectors), this);
     }
 
     @Override
