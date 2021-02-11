@@ -17,11 +17,11 @@ public class MaterialDetector extends JavaPlugin {
 
         Map<Integer, Detector> detectors = new HashMap<>();
 
-        Detector diamondCoalDetector = new Detector("Diamant", "Kohle", "Spitzhacke", Material.COAL_ORE, Material.COAL);
+        Detector diamondCoalDetector = new Detector("Diamant", "Kohle", "Spitzhacke", Material.COAL_ORE, Material.COAL, Material.DIAMOND_PICKAXE);
         diamondCoalDetector.addCraftingRecipe(this);
         detectors.put(diamondCoalDetector.getId(), diamondCoalDetector);
 
-        Detector woodenCoalDetector = new Detector("Holz", "Kohle", "Spitzhacke", Material.COAL_ORE, Material.COAL);
+        Detector woodenCoalDetector = new Detector("Holz", "Kohle", "Spitzhacke", Material.COAL_ORE, Material.COAL, Material.WOODEN_PICKAXE);
         woodenCoalDetector.addCraftingRecipe(this);
         detectors.put(woodenCoalDetector.getId(), woodenCoalDetector);
 

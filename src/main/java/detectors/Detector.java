@@ -15,16 +15,18 @@ public class Detector {
 
     private final Material materialToDetect;
     private final Material craftingMaterial;
+    private final Material baseMaterial;
 
     private NamespacedKey recipeKey;
 
     public Detector(String namePrefix, String nameOfMaterialToDetect, String nameOfBaseMaterial,
-                    Material materialToDetect, Material craftingMaterial) {
+                    Material materialToDetect, Material craftingMaterial, Material baseMaterial) {
         name = namePrefix + " " + nameOfMaterialToDetect + " Detektor " + nameOfBaseMaterial;
         id = name.hashCode();
 
         this.materialToDetect = materialToDetect;
         this.craftingMaterial = craftingMaterial;
+        this.baseMaterial = baseMaterial;
     }
 
     public NamespacedKey getKey() {
@@ -37,7 +39,7 @@ public class Detector {
 
     public void addCraftingRecipe(Plugin plugin) {
         // Create result
-        ItemStack detector = new ItemStack(Material.DIAMOND_PICKAXE);
+        ItemStack detector = new ItemStack(baseMaterial);
 
         ItemMeta detectorMeta = detector.getItemMeta();
         detectorMeta.setDisplayName(name);
@@ -53,12 +55,12 @@ public class Detector {
 
         recipe.shape(
                 "C  ",
-                " P ",
+                " B ",
                 "MMM"
         );
 
         recipe.setIngredient('C', Material.COMPASS);
-        recipe.setIngredient('P', Material.DIAMOND_PICKAXE);
+        recipe.setIngredient('B', baseMaterial);
         recipe.setIngredient('M', craftingMaterial);
 
         Bukkit.addRecipe(recipe);
