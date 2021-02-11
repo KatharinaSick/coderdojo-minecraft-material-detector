@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://hub.spigotmc.org/nexus/content/repositories/public/"
+    }
+}
+
+dependencies {
+    implementation group: 'org.bukkit', name: 'bukkit', version: '1.15.2-R0.1-SNAPSHOT'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+task('deploy', dependsOn: jar, type: Copy) {
+    from jar into "C:\\Users\\Kathi\\Desktop\\coderdojo\\workshops\\2020-11-20_minecraft-material-detector\\minecraft-server\\plugins"
+}
