@@ -1,4 +1,6 @@
 import detectors.Detector;
+import detectors.DiamondDetector;
+import detectors.WoodenDetector;
 import listeners.PlayerEventListener;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -17,11 +19,11 @@ public class MaterialDetector extends JavaPlugin {
 
         Map<Integer, Detector> detectors = new HashMap<>();
 
-        Detector diamondCoalDetector = new Detector("Diamant", "Kohle", "Spitzhacke", Material.COAL_ORE, Material.COAL, Material.DIAMOND_PICKAXE);
+        Detector diamondCoalDetector = new DiamondDetector("Kohle", Material.COAL_ORE, Material.COAL);
         diamondCoalDetector.addCraftingRecipe(this);
         detectors.put(diamondCoalDetector.getId(), diamondCoalDetector);
 
-        Detector woodenCoalDetector = new Detector("Holz", "Kohle", "Spitzhacke", Material.COAL_ORE, Material.COAL, Material.WOODEN_PICKAXE);
+        Detector woodenCoalDetector = new WoodenDetector("Kohle", Material.COAL_ORE, Material.COAL);
         woodenCoalDetector.addCraftingRecipe(this);
         detectors.put(woodenCoalDetector.getId(), woodenCoalDetector);
 

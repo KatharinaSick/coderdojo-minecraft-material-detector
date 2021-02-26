@@ -1,0 +1,7 @@
+detectors:
+  - name: Kohle
+    material_to_detect: COAL_ORE
+    crafting_material: COAL
+  - name: Diamant
+    material_to_detect: DIAMOND_ORE
+    crafting_material: DIAMOND

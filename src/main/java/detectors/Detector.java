@@ -8,7 +8,7 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 
-public class Detector {
+public abstract class Detector {
 
     private final String name;
     private final int id;
@@ -36,6 +36,10 @@ public class Detector {
     public int getId() {
         return id;
     }
+
+    public abstract int getDepth();
+
+    public abstract int getRadius();
 
     public void addCraftingRecipe(Plugin plugin) {
         // Create result
@@ -67,7 +71,7 @@ public class Detector {
     }
 
     public boolean isMaterialBelowLocation(World world, Location location) {
-        for(int y = 0; y < 10; y++) {
+        for(int y = 0; y < getDepth(); y++) {
             Block targetBlock = world.getBlockAt(location.getBlockX(), location.getBlockY() - y, location.getBlockZ());
             if (targetBlock.getType() == materialToDetect) {
                 return true;
@@ -77,8 +81,9 @@ public class Detector {
     }
 
     public boolean isMaterialInRange(World world, Location location) {
-        for(int x = location.getBlockX() - 1; x <= location.getBlockX() + 1; x++) {
-            for(int z = location.getBlockZ() - 1; z <= location.getBlockZ() + 1; z++) {
+        int radius = getRadius();
+        for(int x = location.getBlockX() - radius; x <= location.getBlockX() + radius; x++) {
+            for(int z = location.getBlockZ() - radius; z <= location.getBlockZ() + radius; z++) {
                 if (isMaterialBelowLocation(world, new Location(world, x, location.getBlockY(), z))) {
                     return true;
                 }
